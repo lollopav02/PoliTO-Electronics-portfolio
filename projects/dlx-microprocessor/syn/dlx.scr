@@ -1,0 +1,69 @@
+###############################################################
+# DLX synthesis script - Synopsys Design Compiler
+#
+# Usage, from the syn directory:
+#   dc_shell -x "set PERIOD 1.6; source dlx.scr" | tee syn_1.6.log
+#
+# The memories (IRAM, DRAM) are NOT synthesized: the top level
+# DLX_SYN contains control unit, datapath, PC and IR only, and the
+# memory interfaces are ports of the entity.
+###############################################################
+
+# target clock period in ns (default value if not given from outside)
+if {![info exists PERIOD]} { set PERIOD 1.6 }
+
+# 1. Analysis of the VHDL sources. They are read directly from the
+#    project directory, so synthesis and simulation use the same files.
+#    Order: package, components, datapath, control unit, top level.
+analyze -library WORK -format vhdl { \
+    ../000-globals.vhd \
+    ../a.b-DataPath.core/a.b.a-register_file_v1.vhd \
+    ../a.b-DataPath.core/a.b.b.a.b.a.a.a-fa.vhd \
+    ../a.b-DataPath.core/a.b.b.a.b.a.a-rca.vhd \
+    ../a.b-DataPath.core/a.b.b.a.b.a.b-mux21_4bit.vhd \
+    ../a.b-DataPath.core/a.b.b.a.b.a-carry_select_block.vhd \
+    ../a.b-DataPath.core/a.b.b.a.b-sum_generator.vhd \
+    ../a.b-DataPath.core/a.b.b.a.a.a-g_block.vhd \
+    ../a.b-DataPath.core/a.b.b.a.a.b-pg_block.vhd \
+    ../a.b-DataPath.core/a.b.b.a.a.c-pg_net_block.vhd \
+    ../a.b-DataPath.core/a.b.b.a.a-carry_generator.vhd \
+    ../a.b-DataPath.core/a.b.b.a-p4_adder.vhd \
+    ../a.b-DataPath.core/a.b.b-ALU_v1.vhd \
+    ../a.b-DataPath.core/a.b.c-mux21_v1.vhd \
+    ../a.b-DataPath.core/a.b.d-register_v1.vhd \
+    ../a.b-DataPath.vhd \
+    ../a.a-CU_HW.vhd \
+    ../a-DLX_syn.vhd }
+
+# 2. Elaboration of the synthesis top level and design check
+#    (undriven nets, unconnected ports, constant outputs).
+elaborate DLX_SYN -architecture dlx_rtl -library WORK
+check_design > reports/check_${PERIOD}.rpt
+
+# 3. Constraints.
+#    Clock on the Clk port: all register-to-register paths must fit
+#    in one period. The same bound is applied to any purely
+#    combinational path from the inputs to the outputs.
+create_clock -name "CLK" -period $PERIOD Clk
+set_max_delay $PERIOD -from [all_inputs] -to [all_outputs]
+#    Wire load model used in the laboratories (NanGate 45 nm).
+set_wire_load_model -name 5K_hvratio_1_4
+
+# 4. Mapping on the technology library with high effort.
+compile -map_effort high
+
+# 5. Reports: worst path, the 10 worst endpoints, total area,
+#    area per block (control unit vs datapath), power.
+report_timing                         > reports/timing_${PERIOD}.rpt
+report_timing -max_paths 10 -nworst 1 > reports/timing_top10_${PERIOD}.rpt
+report_area                           > reports/area_${PERIOD}.rpt
+report_area -hierarchy                > reports/area_hier_${PERIOD}.rpt
+report_power                          > reports/power_${PERIOD}.rpt
+
+# 6. Outputs for place & route: names compatible with Verilog,
+#    hierarchical netlist and timing constraints.
+change_names -hierarchy -rules verilog
+write -hierarchy -f verilog -output netlist/dlx_${PERIOD}.v
+write_sdc netlist/dlx_${PERIOD}.sdc
+
+quit

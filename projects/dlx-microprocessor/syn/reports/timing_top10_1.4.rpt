@@ -1,0 +1,996 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : DLX_SYN
+Version: W-2024.09-SP2
+Date   : Tue Oct  6 10:56:53 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DP_I/REGEX/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[30] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGEX/Q_reg[4]/CK (DFFR_X1)                        0.00 #     0.00 r
+  DP_I/REGEX/Q_reg[4]/Q (DFFR_X1)                         0.09       0.09 f
+  DP_I/REGEX/Q[4] (REG_numBit5_0)                         0.00       0.09 f
+  DP_I/U81/Z (XOR2_X1)                                    0.08       0.17 f
+  DP_I/U102/ZN (NOR4_X1)                                  0.09       0.26 r
+  DP_I/U100/ZN (NAND4_X1)                                 0.06       0.33 f
+  DP_I/U94/Z (BUF_X4)                                     0.08       0.41 f
+  DP_I/U209/ZN (OR2_X1)                                   0.08       0.49 f
+  DP_I/U210/ZN (NAND2_X1)                                 0.03       0.52 r
+  DP_I/MUXB/A[11] (MUX21_GENERIC_NBIT32_4)                0.00       0.52 r
+  DP_I/MUXB/U48/ZN (AOI22_X1)                             0.03       0.55 f
+  DP_I/MUXB/U18/ZN (INV_X1)                               0.04       0.59 r
+  DP_I/MUXB/Y[11] (MUX21_GENERIC_NBIT32_4)                0.00       0.59 r
+  DP_I/ALU_i/DATA2[11] (ALU_N32)                          0.00       0.59 r
+  DP_I/ALU_i/U200/ZN (XNOR2_X1)                           0.07       0.66 r
+  DP_I/ALU_i/ADDER/B[11] (P4_ADDER_NBIT32)                0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/B[11] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/B (PG_NET_BLOCK_21)     0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U5/ZN (INV_X1)          0.03       0.69 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U3/ZN (NAND2_X1)        0.03       0.72 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U4/ZN (NAND2_X1)        0.03       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/p (PG_NET_BLOCK_21)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/Pik (PG_BLOCK_119)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/U2/ZN (AOI21_X1)       0.04       0.80 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/U1/ZN (INV_X1)         0.03       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/Gij (PG_BLOCK_119)     0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Gik (PG_BLOCK_89)      0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U2/ZN (AOI21_X1)       0.06       0.89 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U3/ZN (INV_X1)         0.03       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Gij (PG_BLOCK_89)      0.00       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gik (PG_BLOCK_61)      0.00       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U1/ZN (AOI21_X1)       0.06       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U3/ZN (INV_X1)         0.03       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gij (PG_BLOCK_61)      0.00       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gik (PG_BLOCK_37)      0.00       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U3/ZN (AOI21_X1)       0.06       1.06 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U2/ZN (INV_X1)         0.03       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gij (PG_BLOCK_37)      0.00       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/Gkj (PG_BLOCK_5)       0.00       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/U3/ZN (AOI21_X1)       0.04       1.13 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/U1/ZN (INV_X1)         0.04       1.17 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/Gij (PG_BLOCK_5)       0.00       1.17 f
+  DP_I/ALU_i/ADDER/CG/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/Ci[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/Ci (CARRY_SELECT_BLOCK_NBIT4_1)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/S (MUX21_4BIT_N4_1)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U6/ZN (INV_X1)
+                                                          0.05       1.22 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U3/ZN (AOI22_X1)
+                                                          0.04       1.26 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U7/ZN (INV_X1)
+                                                          0.03       1.29 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/Y[2] (MUX21_4BIT_N4_1)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/S[2] (CARRY_SELECT_BLOCK_NBIT4_1)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/SG/S[30] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/S[30] (P4_ADDER_NBIT32)                0.00       1.29 r
+  DP_I/ALU_i/U269/ZN (AOI22_X1)                           0.03       1.32 f
+  DP_I/ALU_i/U162/ZN (NAND2_X1)                           0.04       1.36 r
+  DP_I/ALU_i/OUTALU[30] (ALU_N32)                         0.00       1.36 r
+  DP_I/MUXJUMP/A[30] (MUX21_GENERIC_NBIT32_3)             0.00       1.36 r
+  DP_I/MUXJUMP/U6/Z (MUX2_X1)                             0.05       1.41 r
+  DP_I/MUXJUMP/Y[30] (MUX21_GENERIC_NBIT32_3)             0.00       1.41 r
+  DP_I/PC_OUT[30] (DataPath_N32)                          0.00       1.41 r
+  U200/ZN (NAND2_X1)                                      0.03       1.44 f
+  U201/ZN (NAND2_X1)                                      0.03       1.46 r
+  PC_reg[30]/D (DFFR_X1)                                  0.01       1.47 r
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[30]/CK (DFFR_X1)                                 0.00       1.40 r
+  library setup time                                     -0.03       1.37
+  data required time                                                 1.37
+  --------------------------------------------------------------------------
+  data required time                                                 1.37
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGEX/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[28] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGEX/Q_reg[4]/CK (DFFR_X1)                        0.00 #     0.00 r
+  DP_I/REGEX/Q_reg[4]/Q (DFFR_X1)                         0.09       0.09 f
+  DP_I/REGEX/Q[4] (REG_numBit5_0)                         0.00       0.09 f
+  DP_I/U81/Z (XOR2_X1)                                    0.08       0.17 f
+  DP_I/U102/ZN (NOR4_X1)                                  0.09       0.26 r
+  DP_I/U100/ZN (NAND4_X1)                                 0.06       0.33 f
+  DP_I/U94/Z (BUF_X4)                                     0.08       0.41 f
+  DP_I/U209/ZN (OR2_X1)                                   0.08       0.49 f
+  DP_I/U210/ZN (NAND2_X1)                                 0.03       0.52 r
+  DP_I/MUXB/A[11] (MUX21_GENERIC_NBIT32_4)                0.00       0.52 r
+  DP_I/MUXB/U48/ZN (AOI22_X1)                             0.03       0.55 f
+  DP_I/MUXB/U18/ZN (INV_X1)                               0.04       0.59 r
+  DP_I/MUXB/Y[11] (MUX21_GENERIC_NBIT32_4)                0.00       0.59 r
+  DP_I/ALU_i/DATA2[11] (ALU_N32)                          0.00       0.59 r
+  DP_I/ALU_i/U200/ZN (XNOR2_X1)                           0.07       0.66 r
+  DP_I/ALU_i/ADDER/B[11] (P4_ADDER_NBIT32)                0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/B[11] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/B (PG_NET_BLOCK_21)     0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U5/ZN (INV_X1)          0.03       0.69 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U3/ZN (NAND2_X1)        0.03       0.72 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U4/ZN (NAND2_X1)        0.03       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/p (PG_NET_BLOCK_21)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/Pik (PG_BLOCK_119)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/U2/ZN (AOI21_X1)       0.04       0.80 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/U1/ZN (INV_X1)         0.03       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/Gij (PG_BLOCK_119)     0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Gik (PG_BLOCK_89)      0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U2/ZN (AOI21_X1)       0.06       0.89 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U3/ZN (INV_X1)         0.03       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Gij (PG_BLOCK_89)      0.00       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gik (PG_BLOCK_61)      0.00       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U1/ZN (AOI21_X1)       0.06       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U3/ZN (INV_X1)         0.03       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gij (PG_BLOCK_61)      0.00       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gik (PG_BLOCK_37)      0.00       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U3/ZN (AOI21_X1)       0.06       1.06 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U2/ZN (INV_X1)         0.03       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gij (PG_BLOCK_37)      0.00       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/Gkj (PG_BLOCK_5)       0.00       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/U3/ZN (AOI21_X1)       0.04       1.13 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/U1/ZN (INV_X1)         0.04       1.17 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/Gij (PG_BLOCK_5)       0.00       1.17 f
+  DP_I/ALU_i/ADDER/CG/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/Ci[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/Ci (CARRY_SELECT_BLOCK_NBIT4_1)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/S (MUX21_4BIT_N4_1)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U6/ZN (INV_X1)
+                                                          0.05       1.22 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U5/ZN (AOI22_X1)
+                                                          0.04       1.26 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U1/ZN (INV_X1)
+                                                          0.03       1.29 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/Y[0] (MUX21_4BIT_N4_1)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/S[0] (CARRY_SELECT_BLOCK_NBIT4_1)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/SG/S[28] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/S[28] (P4_ADDER_NBIT32)                0.00       1.29 r
+  DP_I/ALU_i/U279/ZN (AOI22_X1)                           0.03       1.32 f
+  DP_I/ALU_i/U158/ZN (NAND2_X1)                           0.04       1.36 r
+  DP_I/ALU_i/OUTALU[28] (ALU_N32)                         0.00       1.36 r
+  DP_I/MUXJUMP/A[28] (MUX21_GENERIC_NBIT32_3)             0.00       1.36 r
+  DP_I/MUXJUMP/U5/Z (MUX2_X1)                             0.05       1.41 r
+  DP_I/MUXJUMP/Y[28] (MUX21_GENERIC_NBIT32_3)             0.00       1.41 r
+  DP_I/PC_OUT[28] (DataPath_N32)                          0.00       1.41 r
+  U187/ZN (NAND2_X1)                                      0.03       1.44 f
+  U188/ZN (NAND2_X1)                                      0.03       1.46 r
+  PC_reg[28]/D (DFFR_X1)                                  0.01       1.47 r
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[28]/CK (DFFR_X1)                                 0.00       1.40 r
+  library setup time                                     -0.03       1.37
+  data required time                                                 1.37
+  --------------------------------------------------------------------------
+  data required time                                                 1.37
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGMEM/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[0] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGMEM/Q_reg[4]/CK (DFFR_X1)                       0.00 #     0.00 r
+  DP_I/REGMEM/Q_reg[4]/Q (DFFR_X1)                        0.10       0.10 r
+  DP_I/REGMEM/Q[4] (REG_numBit5_4)                        0.00       0.10 r
+  DP_I/MUXJAL_ADDR/B[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.10 r
+  DP_I/MUXJAL_ADDR/U4/Z (MUX2_X1)                         0.06       0.16 r
+  DP_I/MUXJAL_ADDR/Y[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.16 r
+  DP_I/U80/ZN (XNOR2_X1)                                  0.07       0.23 r
+  DP_I/U50/ZN (AND3_X1)                                   0.06       0.29 r
+  DP_I/U146/ZN (AND4_X2)                                  0.07       0.36 r
+  DP_I/U237/ZN (AND2_X2)                                  0.07       0.43 r
+  DP_I/U392/ZN (AOI22_X1)                                 0.05       0.48 f
+  DP_I/U393/ZN (OAI21_X1)                                 0.04       0.52 r
+  DP_I/MUXA/B[28] (MUX21_GENERIC_NBIT32_5)                0.00       0.52 r
+  DP_I/MUXA/U50/ZN (AOI22_X1)                             0.04       0.56 f
+  DP_I/MUXA/U40/ZN (INV_X1)                               0.05       0.61 r
+  DP_I/MUXA/Y[28] (MUX21_GENERIC_NBIT32_5)                0.00       0.61 r
+  DP_I/ALU_i/DATA1[28] (ALU_N32)                          0.00       0.61 r
+  DP_I/ALU_i/U356/Z (BUF_X4)                              0.08       0.70 r
+  DP_I/ALU_i/r80/B[28] (ALU_N32_DW01_cmp6_3)              0.00       0.70 r
+  DP_I/ALU_i/r80/U152/ZN (INV_X1)                         0.05       0.75 f
+  DP_I/ALU_i/r80/U151/ZN (NAND2_X1)                       0.04       0.78 r
+  DP_I/ALU_i/r80/U94/ZN (NAND2_X1)                        0.04       0.83 f
+  DP_I/ALU_i/r80/U57/ZN (NOR2_X1)                         0.06       0.89 r
+  DP_I/ALU_i/r80/U97/ZN (OAI21_X1)                        0.04       0.93 f
+  DP_I/ALU_i/r80/U95/ZN (NOR2_X1)                         0.04       0.97 r
+  DP_I/ALU_i/r80/U269/ZN (AOI21_X1)                       0.04       1.01 f
+  DP_I/ALU_i/r80/U62/ZN (OAI21_X1)                        0.04       1.05 r
+  DP_I/ALU_i/r80/U305/ZN (INV_X1)                         0.02       1.08 f
+  DP_I/ALU_i/r80/GE (ALU_N32_DW01_cmp6_3)                 0.00       1.08 f
+  DP_I/ALU_i/U70/ZN (NAND2_X1)                            0.03       1.10 r
+  DP_I/ALU_i/U72/ZN (AND3_X1)                             0.05       1.15 r
+  DP_I/ALU_i/U86/Z (MUX2_X1)                              0.05       1.20 r
+  DP_I/ALU_i/U83/ZN (NOR2_X1)                             0.02       1.22 f
+  DP_I/ALU_i/U75/Z (MUX2_X1)                              0.06       1.29 f
+  DP_I/ALU_i/U76/ZN (OR2_X1)                              0.06       1.34 f
+  DP_I/ALU_i/OUTALU[0] (ALU_N32)                          0.00       1.34 f
+  DP_I/MUXJUMP/A[0] (MUX21_GENERIC_NBIT32_3)              0.00       1.34 f
+  DP_I/MUXJUMP/U10/ZN (NAND2_X1)                          0.03       1.37 r
+  DP_I/MUXJUMP/U11/ZN (NAND2_X1)                          0.03       1.40 f
+  DP_I/MUXJUMP/Y[0] (MUX21_GENERIC_NBIT32_3)              0.00       1.40 f
+  DP_I/PC_OUT[0] (DataPath_N32)                           0.00       1.40 f
+  U160/ZN (NAND2_X1)                                      0.03       1.43 r
+  U156/ZN (NAND2_X1)                                      0.03       1.46 f
+  PC_reg[0]/D (DFFR_X1)                                   0.01       1.47 f
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[0]/CK (DFFR_X1)                                  0.00       1.40 r
+  library setup time                                     -0.04       1.36
+  data required time                                                 1.36
+  --------------------------------------------------------------------------
+  data required time                                                 1.36
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/is_jal_wb_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[24] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/is_jal_wb_reg/CK (SDFFR_X1)                        0.00 #     0.00 r
+  DP_I/is_jal_wb_reg/Q (SDFFR_X1)                         0.08       0.08 f
+  DP_I/MUXJAL_ADDR/SEL (MUX21_GENERIC_NBIT5_1)            0.00       0.08 f
+  DP_I/MUXJAL_ADDR/U2/Z (BUF_X1)                          0.05       0.13 f
+  DP_I/MUXJAL_ADDR/U6/Z (MUX2_X1)                         0.07       0.21 f
+  DP_I/MUXJAL_ADDR/Y[1] (MUX21_GENERIC_NBIT5_1)           0.00       0.21 f
+  DP_I/U87/ZN (XNOR2_X1)                                  0.07       0.27 f
+  DP_I/U17/ZN (AND4_X2)                                   0.06       0.33 f
+  DP_I/U107/ZN (AND2_X1)                                  0.05       0.38 f
+  DP_I/U234/Z (BUF_X1)                                    0.05       0.42 f
+  DP_I/U330/ZN (AOI22_X1)                                 0.06       0.48 r
+  DP_I/U215/ZN (NAND2_X1)                                 0.03       0.52 f
+  DP_I/MUXB/A[19] (MUX21_GENERIC_NBIT32_4)                0.00       0.52 f
+  DP_I/MUXB/U32/ZN (AOI22_X1)                             0.05       0.56 r
+  DP_I/MUXB/U8/ZN (INV_X1)                                0.04       0.60 f
+  DP_I/MUXB/Y[19] (MUX21_GENERIC_NBIT32_4)                0.00       0.60 f
+  DP_I/ALU_i/DATA2[19] (ALU_N32)                          0.00       0.60 f
+  DP_I/ALU_i/U258/ZN (XNOR2_X1)                           0.07       0.67 f
+  DP_I/ALU_i/ADDER/B[19] (P4_ADDER_NBIT32)                0.00       0.67 f
+  DP_I/ALU_i/ADDER/CG/B[19] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.67 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_20/B (PG_NET_BLOCK_13)     0.00       0.67 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_20/U2/Z (XOR2_X1)          0.09       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_20/p (PG_NET_BLOCK_13)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/Pik (PG_BLOCK_111)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/U1/ZN (AOI21_X1)       0.05       0.81 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/U3/ZN (INV_X1)         0.03       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/Gij (PG_BLOCK_111)     0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/Gik (PG_BLOCK_81)      0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/U3/ZN (AOI21_X1)       0.06       0.89 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/U2/ZN (INV_X1)         0.03       0.92 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/Gij (PG_BLOCK_81)      0.00       0.92 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/Gkj (PG_BLOCK_49)      0.00       0.92 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/U2/ZN (AOI21_X1)       0.04       0.96 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/U1/ZN (INV_X1)         0.03       0.99 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/Gij (PG_BLOCK_49)      0.00       0.99 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/Gik (PG_BLOCK_25)      0.00       0.99 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/U3/ZN (AOI21_X1)       0.06       1.05 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/U2/ZN (INV_X1)         0.02       1.07 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/Gij (PG_BLOCK_25)      0.00       1.07 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/Gik (PG_BLOCK_9)       0.00       1.07 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/U3/ZN (AOI21_X1)       0.05       1.12 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/U2/ZN (INV_X1)         0.04       1.17 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/Gij (PG_BLOCK_9)       0.00       1.17 f
+  DP_I/ALU_i/ADDER/CG/Co[5] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/Ci[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/Ci (CARRY_SELECT_BLOCK_NBIT4_2)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/S (MUX21_4BIT_N4_2)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/U1/ZN (INV_X1)
+                                                          0.04       1.21 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/U4/ZN (AOI22_X1)
+                                                          0.04       1.25 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/U5/ZN (INV_X1)
+                                                          0.03       1.28 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/Y[0] (MUX21_4BIT_N4_2)
+                                                          0.00       1.28 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/S[0] (CARRY_SELECT_BLOCK_NBIT4_2)
+                                                          0.00       1.28 r
+  DP_I/ALU_i/ADDER/SG/S[24] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.28 r
+  DP_I/ALU_i/ADDER/S[24] (P4_ADDER_NBIT32)                0.00       1.28 r
+  DP_I/ALU_i/U417/ZN (AOI22_X1)                           0.03       1.31 f
+  DP_I/ALU_i/U155/ZN (NAND2_X1)                           0.04       1.35 r
+  DP_I/ALU_i/OUTALU[24] (ALU_N32)                         0.00       1.35 r
+  DP_I/MUXJUMP/A[24] (MUX21_GENERIC_NBIT32_3)             0.00       1.35 r
+  DP_I/MUXJUMP/U20/ZN (NAND2_X1)                          0.03       1.38 f
+  DP_I/MUXJUMP/U21/ZN (NAND2_X1)                          0.03       1.41 r
+  DP_I/MUXJUMP/Y[24] (MUX21_GENERIC_NBIT32_3)             0.00       1.41 r
+  DP_I/PC_OUT[24] (DataPath_N32)                          0.00       1.41 r
+  U191/ZN (NAND2_X1)                                      0.03       1.44 f
+  U192/ZN (NAND2_X1)                                      0.03       1.46 r
+  PC_reg[24]/D (DFFR_X2)                                  0.01       1.48 r
+  data arrival time                                                  1.48
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[24]/CK (DFFR_X2)                                 0.00       1.40 r
+  library setup time                                     -0.03       1.37
+  data required time                                                 1.37
+  --------------------------------------------------------------------------
+  data required time                                                 1.37
+  data arrival time                                                 -1.48
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGEX/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[31] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGEX/Q_reg[4]/CK (DFFR_X1)                        0.00 #     0.00 r
+  DP_I/REGEX/Q_reg[4]/Q (DFFR_X1)                         0.09       0.09 f
+  DP_I/REGEX/Q[4] (REG_numBit5_0)                         0.00       0.09 f
+  DP_I/U81/Z (XOR2_X1)                                    0.08       0.17 f
+  DP_I/U102/ZN (NOR4_X1)                                  0.09       0.26 r
+  DP_I/U100/ZN (NAND4_X1)                                 0.06       0.33 f
+  DP_I/U94/Z (BUF_X4)                                     0.08       0.41 f
+  DP_I/U209/ZN (OR2_X1)                                   0.08       0.49 f
+  DP_I/U210/ZN (NAND2_X1)                                 0.03       0.52 r
+  DP_I/MUXB/A[11] (MUX21_GENERIC_NBIT32_4)                0.00       0.52 r
+  DP_I/MUXB/U48/ZN (AOI22_X1)                             0.03       0.55 f
+  DP_I/MUXB/U18/ZN (INV_X1)                               0.04       0.59 r
+  DP_I/MUXB/Y[11] (MUX21_GENERIC_NBIT32_4)                0.00       0.59 r
+  DP_I/ALU_i/DATA2[11] (ALU_N32)                          0.00       0.59 r
+  DP_I/ALU_i/U200/ZN (XNOR2_X1)                           0.07       0.66 r
+  DP_I/ALU_i/ADDER/B[11] (P4_ADDER_NBIT32)                0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/B[11] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/B (PG_NET_BLOCK_21)     0.00       0.66 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U5/ZN (INV_X1)          0.03       0.69 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U3/ZN (NAND2_X1)        0.03       0.72 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/U4/ZN (NAND2_X1)        0.03       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_12/p (PG_NET_BLOCK_21)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/Pik (PG_BLOCK_119)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/U2/ZN (AOI21_X1)       0.04       0.80 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/U1/ZN (INV_X1)         0.03       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_12/Gij (PG_BLOCK_119)     0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Gik (PG_BLOCK_89)      0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U2/ZN (AOI21_X1)       0.06       0.89 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U3/ZN (INV_X1)         0.03       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Gij (PG_BLOCK_89)      0.00       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gik (PG_BLOCK_61)      0.00       0.91 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U1/ZN (AOI21_X1)       0.06       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U3/ZN (INV_X1)         0.03       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gij (PG_BLOCK_61)      0.00       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gik (PG_BLOCK_37)      0.00       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U3/ZN (AOI21_X1)       0.06       1.06 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U2/ZN (INV_X1)         0.03       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gij (PG_BLOCK_37)      0.00       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/Gkj (PG_BLOCK_5)       0.00       1.08 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/U3/ZN (AOI21_X1)       0.04       1.13 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/U1/ZN (INV_X1)         0.04       1.17 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_28/Gij (PG_BLOCK_5)       0.00       1.17 f
+  DP_I/ALU_i/ADDER/CG/Co[6] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/Ci[7] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/Ci (CARRY_SELECT_BLOCK_NBIT4_1)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/S (MUX21_4BIT_N4_1)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U6/ZN (INV_X1)
+                                                          0.05       1.22 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U9/ZN (AOI22_X1)
+                                                          0.04       1.26 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/U8/ZN (INV_X1)
+                                                          0.03       1.29 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/MUX_INST/Y[3] (MUX21_4BIT_N4_1)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_7/S[3] (CARRY_SELECT_BLOCK_NBIT4_1)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/SG/S[31] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.29 r
+  DP_I/ALU_i/ADDER/S[31] (P4_ADDER_NBIT32)                0.00       1.29 r
+  DP_I/ALU_i/U438/ZN (AOI22_X1)                           0.03       1.32 f
+  DP_I/ALU_i/U137/ZN (NAND2_X1)                           0.04       1.36 r
+  DP_I/ALU_i/OUTALU[31] (ALU_N32)                         0.00       1.36 r
+  DP_I/MUXJUMP/A[31] (MUX21_GENERIC_NBIT32_3)             0.00       1.36 r
+  DP_I/MUXJUMP/U17/ZN (NAND2_X1)                          0.03       1.39 f
+  DP_I/MUXJUMP/U19/ZN (NAND2_X1)                          0.03       1.42 r
+  DP_I/MUXJUMP/Y[31] (MUX21_GENERIC_NBIT32_3)             0.00       1.42 r
+  DP_I/PC_OUT[31] (DataPath_N32)                          0.00       1.42 r
+  U282/Z (MUX2_X1)                                        0.04       1.46 r
+  PC_reg[31]/D (DFFR_X2)                                  0.01       1.48 r
+  data arrival time                                                  1.48
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[31]/CK (DFFR_X2)                                 0.00       1.40 r
+  library setup time                                     -0.03       1.37
+  data required time                                                 1.37
+  --------------------------------------------------------------------------
+  data required time                                                 1.37
+  data arrival time                                                 -1.48
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGMEM/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[14] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGMEM/Q_reg[4]/CK (DFFR_X1)                       0.00 #     0.00 r
+  DP_I/REGMEM/Q_reg[4]/Q (DFFR_X1)                        0.10       0.10 r
+  DP_I/REGMEM/Q[4] (REG_numBit5_4)                        0.00       0.10 r
+  DP_I/MUXJAL_ADDR/B[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.10 r
+  DP_I/MUXJAL_ADDR/U4/Z (MUX2_X1)                         0.06       0.16 r
+  DP_I/MUXJAL_ADDR/Y[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.16 r
+  DP_I/U67/ZN (XNOR2_X1)                                  0.07       0.23 r
+  DP_I/U65/ZN (AND3_X1)                                   0.06       0.29 r
+  DP_I/U66/ZN (NAND4_X1)                                  0.05       0.33 f
+  DP_I/U101/ZN (AND2_X2)                                  0.07       0.41 f
+  DP_I/U315/ZN (AOI22_X1)                                 0.08       0.48 r
+  DP_I/U175/ZN (NAND2_X1)                                 0.04       0.52 f
+  DP_I/MUXB/A[9] (MUX21_GENERIC_NBIT32_4)                 0.00       0.52 f
+  DP_I/MUXB/U47/Z (MUX2_X2)                               0.08       0.60 f
+  DP_I/MUXB/Y[9] (MUX21_GENERIC_NBIT32_4)                 0.00       0.60 f
+  DP_I/ALU_i/DATA2[9] (ALU_N32)                           0.00       0.60 f
+  DP_I/ALU_i/U301/ZN (XNOR2_X1)                           0.08       0.68 r
+  DP_I/ALU_i/ADDER/B[9] (P4_ADDER_NBIT32)                 0.00       0.68 r
+  DP_I/ALU_i/ADDER/CG/B[9] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.68 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_10/B (PG_NET_BLOCK_23)     0.00       0.68 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_10/U2/Z (XOR2_X1)          0.09       0.76 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_10/p (PG_NET_BLOCK_23)     0.00       0.76 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/Pik (PG_BLOCK_121)     0.00       0.76 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/U1/Z (CLKBUF_X1)       0.05       0.81 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/U2/ZN (AND2_X1)        0.04       0.86 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/Pij (PG_BLOCK_121)     0.00       0.86 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Pkj (PG_BLOCK_89)      0.00       0.86 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U1/ZN (AND2_X1)        0.05       0.91 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Pij (PG_BLOCK_89)      0.00       0.91 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Pik (PG_BLOCK_61)      0.00       0.91 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U1/ZN (AOI21_X1)       0.03       0.94 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U3/ZN (INV_X1)         0.03       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gij (PG_BLOCK_61)      0.00       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gik (PG_BLOCK_37)      0.00       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U3/ZN (AOI21_X1)       0.03       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U2/ZN (INV_X1)         0.03       1.03 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gij (PG_BLOCK_37)      0.00       1.03 r
+  DP_I/ALU_i/ADDER/CG/U2/Z (CLKBUF_X2)                    0.05       1.08 r
+  DP_I/ALU_i/ADDER/CG/Co[2] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/Ci[3] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/Ci (CARRY_SELECT_BLOCK_NBIT4_5)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/S (MUX21_4BIT_N4_5)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/U8/ZN (INV_X1)
+                                                          0.04       1.13 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/U7/ZN (AOI22_X1)
+                                                          0.07       1.19 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/U1/ZN (INV_X1)
+                                                          0.02       1.22 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/Y[2] (MUX21_4BIT_N4_5)
+                                                          0.00       1.22 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/S[2] (CARRY_SELECT_BLOCK_NBIT4_5)
+                                                          0.00       1.22 f
+  DP_I/ALU_i/ADDER/SG/S[14] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.22 f
+  DP_I/ALU_i/ADDER/S[14] (P4_ADDER_NBIT32)                0.00       1.22 f
+  DP_I/ALU_i/U448/ZN (AOI222_X1)                          0.07       1.28 r
+  DP_I/ALU_i/U282/ZN (NAND2_X1)                           0.04       1.33 f
+  DP_I/ALU_i/OUTALU[14] (ALU_N32)                         0.00       1.33 f
+  DP_I/MUXJUMP/A[14] (MUX21_GENERIC_NBIT32_3)             0.00       1.33 f
+  DP_I/MUXJUMP/U28/ZN (AOI22_X1)                          0.05       1.38 r
+  DP_I/MUXJUMP/U27/ZN (INV_X1)                            0.03       1.40 f
+  DP_I/MUXJUMP/Y[14] (MUX21_GENERIC_NBIT32_3)             0.00       1.40 f
+  DP_I/PC_OUT[14] (DataPath_N32)                          0.00       1.40 f
+  U210/ZN (NAND2_X1)                                      0.03       1.43 r
+  U174/ZN (NAND2_X1)                                      0.03       1.46 f
+  PC_reg[14]/D (DFFR_X1)                                  0.01       1.47 f
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[14]/CK (DFFR_X1)                                 0.00       1.40 r
+  library setup time                                     -0.04       1.36
+  data required time                                                 1.36
+  --------------------------------------------------------------------------
+  data required time                                                 1.36
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGMEM/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[20] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGMEM/Q_reg[4]/CK (DFFR_X1)                       0.00 #     0.00 r
+  DP_I/REGMEM/Q_reg[4]/Q (DFFR_X1)                        0.10       0.10 r
+  DP_I/REGMEM/Q[4] (REG_numBit5_4)                        0.00       0.10 r
+  DP_I/MUXJAL_ADDR/B[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.10 r
+  DP_I/MUXJAL_ADDR/U4/Z (MUX2_X1)                         0.06       0.16 r
+  DP_I/MUXJAL_ADDR/Y[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.16 r
+  DP_I/U80/ZN (XNOR2_X1)                                  0.07       0.23 r
+  DP_I/U145/ZN (AND3_X1)                                  0.06       0.29 r
+  DP_I/U357/ZN (NAND4_X1)                                 0.05       0.34 f
+  DP_I/U171/ZN (AND2_X2)                                  0.07       0.41 f
+  DP_I/U363/ZN (AOI22_X1)                                 0.07       0.48 r
+  DP_I/U226/ZN (NAND2_X1)                                 0.04       0.51 f
+  DP_I/MUXA/B[3] (MUX21_GENERIC_NBIT32_5)                 0.00       0.51 f
+  DP_I/MUXA/U18/Z (MUX2_X2)                               0.08       0.60 f
+  DP_I/MUXA/Y[3] (MUX21_GENERIC_NBIT32_5)                 0.00       0.60 f
+  DP_I/ALU_i/DATA1[3] (ALU_N32)                           0.00       0.60 f
+  DP_I/ALU_i/U207/Z (BUF_X2)                              0.07       0.66 f
+  DP_I/ALU_i/ADDER/A[3] (P4_ADDER_NBIT32)                 0.00       0.66 f
+  DP_I/ALU_i/ADDER/CG/A[3] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.66 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_4/A (PG_NET_BLOCK_29)      0.00       0.66 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_4/U2/Z (XOR2_X1)           0.11       0.77 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_4/p (PG_NET_BLOCK_29)      0.00       0.77 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/Pik (PG_BLOCK_127)      0.00       0.77 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/U3/ZN (AOI21_X1)        0.05       0.82 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/U1/ZN (INV_X1)          0.03       0.84 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/Gij (PG_BLOCK_127)      0.00       0.84 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/Gik (PG_BLOCK_97)       0.00       0.84 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/U3/ZN (AOI21_X1)        0.06       0.90 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/U2/ZN (INV_X1)          0.03       0.93 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/Gij (PG_BLOCK_97)       0.00       0.93 f
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/Gik (G_BLOCK_4)          0.00       0.93 f
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/U2/ZN (AOI21_X1)         0.06       0.99 r
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/U1/ZN (INV_X1)           0.03       1.01 f
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/Gij (G_BLOCK_4)          0.00       1.01 f
+  DP_I/ALU_i/ADDER/CG/U14/Z (CLKBUF_X1)                   0.04       1.06 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/Gkj (PG_BLOCK_13)      0.00       1.06 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/U1/ZN (AND2_X1)        0.04       1.09 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/U2/ZN (OR2_X2)         0.06       1.16 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/Gij (PG_BLOCK_13)      0.00       1.16 f
+  DP_I/ALU_i/ADDER/CG/Co[4] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/Ci[5] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/Ci (CARRY_SELECT_BLOCK_NBIT4_3)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/S (MUX21_4BIT_N4_3)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/U8/ZN (AOI22_X1)
+                                                          0.06       1.21 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/U10/ZN (INV_X1)
+                                                          0.03       1.24 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/Y[0] (MUX21_4BIT_N4_3)
+                                                          0.00       1.24 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/S[0] (CARRY_SELECT_BLOCK_NBIT4_3)
+                                                          0.00       1.24 f
+  DP_I/ALU_i/ADDER/SG/S[20] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.24 f
+  DP_I/ALU_i/ADDER/S[20] (P4_ADDER_NBIT32)                0.00       1.24 f
+  DP_I/ALU_i/U439/ZN (AOI22_X1)                           0.05       1.29 r
+  DP_I/ALU_i/U274/ZN (NAND3_X1)                           0.04       1.33 f
+  DP_I/ALU_i/OUTALU[20] (ALU_N32)                         0.00       1.33 f
+  DP_I/MUXJUMP/A[20] (MUX21_GENERIC_NBIT32_3)             0.00       1.33 f
+  DP_I/MUXJUMP/U50/ZN (AOI22_X1)                          0.05       1.38 r
+  DP_I/MUXJUMP/U68/ZN (INV_X1)                            0.03       1.40 f
+  DP_I/MUXJUMP/Y[20] (MUX21_GENERIC_NBIT32_3)             0.00       1.40 f
+  DP_I/PC_OUT[20] (DataPath_N32)                          0.00       1.40 f
+  U209/ZN (NAND2_X1)                                      0.03       1.43 r
+  U167/ZN (NAND2_X1)                                      0.03       1.46 f
+  PC_reg[20]/D (DFFR_X1)                                  0.01       1.47 f
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[20]/CK (DFFR_X1)                                 0.00       1.40 r
+  library setup time                                     -0.04       1.36
+  data required time                                                 1.36
+  --------------------------------------------------------------------------
+  data required time                                                 1.36
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/is_jal_wb_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[26] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/is_jal_wb_reg/CK (SDFFR_X1)                        0.00 #     0.00 r
+  DP_I/is_jal_wb_reg/Q (SDFFR_X1)                         0.08       0.08 f
+  DP_I/MUXJAL_ADDR/SEL (MUX21_GENERIC_NBIT5_1)            0.00       0.08 f
+  DP_I/MUXJAL_ADDR/U2/Z (BUF_X1)                          0.05       0.13 f
+  DP_I/MUXJAL_ADDR/U6/Z (MUX2_X1)                         0.07       0.21 f
+  DP_I/MUXJAL_ADDR/Y[1] (MUX21_GENERIC_NBIT5_1)           0.00       0.21 f
+  DP_I/U87/ZN (XNOR2_X1)                                  0.07       0.27 f
+  DP_I/U17/ZN (AND4_X2)                                   0.06       0.33 f
+  DP_I/U107/ZN (AND2_X1)                                  0.05       0.38 f
+  DP_I/U234/Z (BUF_X1)                                    0.05       0.42 f
+  DP_I/U330/ZN (AOI22_X1)                                 0.06       0.48 r
+  DP_I/U215/ZN (NAND2_X1)                                 0.03       0.52 f
+  DP_I/MUXB/A[19] (MUX21_GENERIC_NBIT32_4)                0.00       0.52 f
+  DP_I/MUXB/U32/ZN (AOI22_X1)                             0.05       0.56 r
+  DP_I/MUXB/U8/ZN (INV_X1)                                0.04       0.60 f
+  DP_I/MUXB/Y[19] (MUX21_GENERIC_NBIT32_4)                0.00       0.60 f
+  DP_I/ALU_i/DATA2[19] (ALU_N32)                          0.00       0.60 f
+  DP_I/ALU_i/U258/ZN (XNOR2_X1)                           0.07       0.67 f
+  DP_I/ALU_i/ADDER/B[19] (P4_ADDER_NBIT32)                0.00       0.67 f
+  DP_I/ALU_i/ADDER/CG/B[19] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.67 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_20/B (PG_NET_BLOCK_13)     0.00       0.67 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_20/U2/Z (XOR2_X1)          0.09       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_20/p (PG_NET_BLOCK_13)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/Pik (PG_BLOCK_111)     0.00       0.76 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/U1/ZN (AOI21_X1)       0.05       0.81 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/U3/ZN (INV_X1)         0.03       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_20/Gij (PG_BLOCK_111)     0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/Gik (PG_BLOCK_81)      0.00       0.83 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/U3/ZN (AOI21_X1)       0.06       0.89 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/U2/ZN (INV_X1)         0.03       0.92 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_20/Gij (PG_BLOCK_81)      0.00       0.92 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/Gkj (PG_BLOCK_49)      0.00       0.92 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/U2/ZN (AOI21_X1)       0.04       0.96 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/U1/ZN (INV_X1)         0.03       0.99 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_24/Gij (PG_BLOCK_49)      0.00       0.99 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/Gik (PG_BLOCK_25)      0.00       0.99 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/U3/ZN (AOI21_X1)       0.06       1.05 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/U2/ZN (INV_X1)         0.02       1.07 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_24/Gij (PG_BLOCK_25)      0.00       1.07 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/Gik (PG_BLOCK_9)       0.00       1.07 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/U3/ZN (AOI21_X1)       0.05       1.12 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/U2/ZN (INV_X1)         0.04       1.17 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_24/Gij (PG_BLOCK_9)       0.00       1.17 f
+  DP_I/ALU_i/ADDER/CG/Co[5] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/Ci[6] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/Ci (CARRY_SELECT_BLOCK_NBIT4_2)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/S (MUX21_4BIT_N4_2)
+                                                          0.00       1.17 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/U9/ZN (INV_X1)
+                                                          0.04       1.21 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/U8/ZN (AOI22_X1)
+                                                          0.04       1.25 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/U10/ZN (INV_X1)
+                                                          0.03       1.28 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/MUX_INST/Y[2] (MUX21_4BIT_N4_2)
+                                                          0.00       1.28 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_6/S[2] (CARRY_SELECT_BLOCK_NBIT4_2)
+                                                          0.00       1.28 r
+  DP_I/ALU_i/ADDER/SG/S[26] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.28 r
+  DP_I/ALU_i/ADDER/S[26] (P4_ADDER_NBIT32)                0.00       1.28 r
+  DP_I/ALU_i/U422/ZN (AOI22_X1)                           0.03       1.31 f
+  DP_I/ALU_i/U69/ZN (NAND2_X1)                            0.04       1.35 r
+  DP_I/ALU_i/OUTALU[26] (ALU_N32)                         0.00       1.35 r
+  DP_I/MUXJUMP/A[26] (MUX21_GENERIC_NBIT32_3)             0.00       1.35 r
+  DP_I/MUXJUMP/U22/ZN (NAND2_X1)                          0.03       1.38 f
+  DP_I/MUXJUMP/U23/ZN (NAND2_X1)                          0.03       1.41 r
+  DP_I/MUXJUMP/Y[26] (MUX21_GENERIC_NBIT32_3)             0.00       1.41 r
+  DP_I/PC_OUT[26] (DataPath_N32)                          0.00       1.41 r
+  U183/ZN (NAND2_X1)                                      0.03       1.44 f
+  U184/ZN (NAND2_X1)                                      0.03       1.46 r
+  PC_reg[26]/D (DFFR_X2)                                  0.01       1.47 r
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[26]/CK (DFFR_X2)                                 0.00       1.40 r
+  library setup time                                     -0.03       1.37
+  data required time                                                 1.37
+  --------------------------------------------------------------------------
+  data required time                                                 1.37
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGMEM/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[23] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGMEM/Q_reg[4]/CK (DFFR_X1)                       0.00 #     0.00 r
+  DP_I/REGMEM/Q_reg[4]/Q (DFFR_X1)                        0.10       0.10 r
+  DP_I/REGMEM/Q[4] (REG_numBit5_4)                        0.00       0.10 r
+  DP_I/MUXJAL_ADDR/B[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.10 r
+  DP_I/MUXJAL_ADDR/U4/Z (MUX2_X1)                         0.06       0.16 r
+  DP_I/MUXJAL_ADDR/Y[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.16 r
+  DP_I/U80/ZN (XNOR2_X1)                                  0.07       0.23 r
+  DP_I/U145/ZN (AND3_X1)                                  0.06       0.29 r
+  DP_I/U357/ZN (NAND4_X1)                                 0.05       0.34 f
+  DP_I/U171/ZN (AND2_X2)                                  0.07       0.41 f
+  DP_I/U363/ZN (AOI22_X1)                                 0.07       0.48 r
+  DP_I/U226/ZN (NAND2_X1)                                 0.04       0.51 f
+  DP_I/MUXA/B[3] (MUX21_GENERIC_NBIT32_5)                 0.00       0.51 f
+  DP_I/MUXA/U18/Z (MUX2_X2)                               0.08       0.60 f
+  DP_I/MUXA/Y[3] (MUX21_GENERIC_NBIT32_5)                 0.00       0.60 f
+  DP_I/ALU_i/DATA1[3] (ALU_N32)                           0.00       0.60 f
+  DP_I/ALU_i/U207/Z (BUF_X2)                              0.07       0.66 f
+  DP_I/ALU_i/ADDER/A[3] (P4_ADDER_NBIT32)                 0.00       0.66 f
+  DP_I/ALU_i/ADDER/CG/A[3] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.66 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_4/A (PG_NET_BLOCK_29)      0.00       0.66 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_4/U2/Z (XOR2_X1)           0.11       0.77 f
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_4/p (PG_NET_BLOCK_29)      0.00       0.77 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/Pik (PG_BLOCK_127)      0.00       0.77 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/U3/ZN (AOI21_X1)        0.05       0.82 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/U1/ZN (INV_X1)          0.03       0.84 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_4/Gij (PG_BLOCK_127)      0.00       0.84 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/Gik (PG_BLOCK_97)       0.00       0.84 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/U3/ZN (AOI21_X1)        0.06       0.90 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/U2/ZN (INV_X1)          0.03       0.93 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_4/Gij (PG_BLOCK_97)       0.00       0.93 f
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/Gik (G_BLOCK_4)          0.00       0.93 f
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/U2/ZN (AOI21_X1)         0.06       0.99 r
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/U1/ZN (INV_X1)           0.03       1.01 f
+  DP_I/ALU_i/ADDER/CG/G_INST_3_4/Gij (G_BLOCK_4)          0.00       1.01 f
+  DP_I/ALU_i/ADDER/CG/U14/Z (CLKBUF_X1)                   0.04       1.06 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/Gkj (PG_BLOCK_13)      0.00       1.06 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/U1/ZN (AND2_X1)        0.04       1.09 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/U2/ZN (OR2_X2)         0.06       1.16 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_5_20/Gij (PG_BLOCK_13)      0.00       1.16 f
+  DP_I/ALU_i/ADDER/CG/Co[4] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/Ci[5] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/Ci (CARRY_SELECT_BLOCK_NBIT4_3)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/S (MUX21_4BIT_N4_3)
+                                                          0.00       1.16 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/U4/ZN (AOI22_X1)
+                                                          0.06       1.21 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/U3/ZN (INV_X1)
+                                                          0.03       1.24 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/MUX_INST/Y[3] (MUX21_4BIT_N4_3)
+                                                          0.00       1.24 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_5/S[3] (CARRY_SELECT_BLOCK_NBIT4_3)
+                                                          0.00       1.24 f
+  DP_I/ALU_i/ADDER/SG/S[23] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.24 f
+  DP_I/ALU_i/ADDER/S[23] (P4_ADDER_NBIT32)                0.00       1.24 f
+  DP_I/ALU_i/U393/ZN (AOI22_X1)                           0.05       1.29 r
+  DP_I/ALU_i/U271/ZN (NAND3_X1)                           0.04       1.33 f
+  DP_I/ALU_i/OUTALU[23] (ALU_N32)                         0.00       1.33 f
+  DP_I/MUXJUMP/A[23] (MUX21_GENERIC_NBIT32_3)             0.00       1.33 f
+  DP_I/MUXJUMP/U7/Z (MUX2_X1)                             0.07       1.40 f
+  DP_I/MUXJUMP/Y[23] (MUX21_GENERIC_NBIT32_3)             0.00       1.40 f
+  DP_I/PC_OUT[23] (DataPath_N32)                          0.00       1.40 f
+  U134/ZN (NAND2_X1)                                      0.03       1.43 r
+  U135/ZN (NAND2_X1)                                      0.03       1.46 f
+  PC_reg[23]/D (DFFR_X1)                                  0.01       1.47 f
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[23]/CK (DFFR_X1)                                 0.00       1.40 r
+  library setup time                                     -0.04       1.36
+  data required time                                                 1.36
+  --------------------------------------------------------------------------
+  data required time                                                 1.36
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+  Startpoint: DP_I/REGMEM/Q_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[12] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/REGMEM/Q_reg[4]/CK (DFFR_X1)                       0.00 #     0.00 r
+  DP_I/REGMEM/Q_reg[4]/Q (DFFR_X1)                        0.10       0.10 r
+  DP_I/REGMEM/Q[4] (REG_numBit5_4)                        0.00       0.10 r
+  DP_I/MUXJAL_ADDR/B[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.10 r
+  DP_I/MUXJAL_ADDR/U4/Z (MUX2_X1)                         0.06       0.16 r
+  DP_I/MUXJAL_ADDR/Y[4] (MUX21_GENERIC_NBIT5_1)           0.00       0.16 r
+  DP_I/U67/ZN (XNOR2_X1)                                  0.07       0.23 r
+  DP_I/U65/ZN (AND3_X1)                                   0.06       0.29 r
+  DP_I/U66/ZN (NAND4_X1)                                  0.05       0.33 f
+  DP_I/U101/ZN (AND2_X2)                                  0.07       0.41 f
+  DP_I/U315/ZN (AOI22_X1)                                 0.08       0.48 r
+  DP_I/U175/ZN (NAND2_X1)                                 0.04       0.52 f
+  DP_I/MUXB/A[9] (MUX21_GENERIC_NBIT32_4)                 0.00       0.52 f
+  DP_I/MUXB/U47/Z (MUX2_X2)                               0.08       0.60 f
+  DP_I/MUXB/Y[9] (MUX21_GENERIC_NBIT32_4)                 0.00       0.60 f
+  DP_I/ALU_i/DATA2[9] (ALU_N32)                           0.00       0.60 f
+  DP_I/ALU_i/U301/ZN (XNOR2_X1)                           0.08       0.68 r
+  DP_I/ALU_i/ADDER/B[9] (P4_ADDER_NBIT32)                 0.00       0.68 r
+  DP_I/ALU_i/ADDER/CG/B[9] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       0.68 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_10/B (PG_NET_BLOCK_23)     0.00       0.68 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_10/U2/Z (XOR2_X1)          0.09       0.76 r
+  DP_I/ALU_i/ADDER/CG/PG_NET_0_10/p (PG_NET_BLOCK_23)     0.00       0.76 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/Pik (PG_BLOCK_121)     0.00       0.76 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/U1/Z (CLKBUF_X1)       0.05       0.81 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/U2/ZN (AND2_X1)        0.04       0.86 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_1_10/Pij (PG_BLOCK_121)     0.00       0.86 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Pkj (PG_BLOCK_89)      0.00       0.86 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/U1/ZN (AND2_X1)        0.05       0.91 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_2_12/Pij (PG_BLOCK_89)      0.00       0.91 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Pik (PG_BLOCK_61)      0.00       0.91 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U1/ZN (AOI21_X1)       0.03       0.94 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/U3/ZN (INV_X1)         0.03       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_3_12/Gij (PG_BLOCK_61)      0.00       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gik (PG_BLOCK_37)      0.00       0.97 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U3/ZN (AOI21_X1)       0.03       1.00 f
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/U2/ZN (INV_X1)         0.03       1.03 r
+  DP_I/ALU_i/ADDER/CG/PG_INST_4_12/Gij (PG_BLOCK_37)      0.00       1.03 r
+  DP_I/ALU_i/ADDER/CG/U2/Z (CLKBUF_X2)                    0.05       1.08 r
+  DP_I/ALU_i/ADDER/CG/Co[2] (CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/Ci[3] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/Ci (CARRY_SELECT_BLOCK_NBIT4_5)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/S (MUX21_4BIT_N4_5)
+                                                          0.00       1.08 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/U8/ZN (INV_X1)
+                                                          0.04       1.13 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/U5/ZN (AOI22_X1)
+                                                          0.07       1.19 r
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/U3/ZN (INV_X1)
+                                                          0.02       1.22 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/MUX_INST/Y[0] (MUX21_4BIT_N4_5)
+                                                          0.00       1.22 f
+  DP_I/ALU_i/ADDER/SG/CSB_INST_3/S[0] (CARRY_SELECT_BLOCK_NBIT4_5)
+                                                          0.00       1.22 f
+  DP_I/ALU_i/ADDER/SG/S[12] (SUM_GENERATOR_NBIT_PER_BLOCK4_NBLOCKS8)
+                                                          0.00       1.22 f
+  DP_I/ALU_i/ADDER/S[12] (P4_ADDER_NBIT32)                0.00       1.22 f
+  DP_I/ALU_i/U465/ZN (AOI222_X1)                          0.07       1.28 r
+  DP_I/ALU_i/U412/ZN (NAND2_X1)                           0.04       1.33 f
+  DP_I/ALU_i/OUTALU[12] (ALU_N32)                         0.00       1.33 f
+  DP_I/MUXJUMP/A[12] (MUX21_GENERIC_NBIT32_3)             0.00       1.33 f
+  DP_I/MUXJUMP/U47/ZN (AOI22_X1)                          0.05       1.38 r
+  DP_I/MUXJUMP/U37/ZN (INV_X1)                            0.03       1.40 f
+  DP_I/MUXJUMP/Y[12] (MUX21_GENERIC_NBIT32_3)             0.00       1.40 f
+  DP_I/PC_OUT[12] (DataPath_N32)                          0.00       1.40 f
+  U185/ZN (NAND2_X1)                                      0.03       1.43 r
+  U186/ZN (NAND2_X1)                                      0.03       1.46 f
+  PC_reg[12]/D (DFFR_X1)                                  0.01       1.47 f
+  data arrival time                                                  1.47
+
+  clock CLK (rise edge)                                   1.40       1.40
+  clock network delay (ideal)                             0.00       1.40
+  PC_reg[12]/CK (DFFR_X1)                                 0.00       1.40 r
+  library setup time                                     -0.04       1.36
+  data required time                                                 1.36
+  --------------------------------------------------------------------------
+  data required time                                                 1.36
+  data arrival time                                                 -1.47
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.11
+
+
+1

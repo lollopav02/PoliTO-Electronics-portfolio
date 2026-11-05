@@ -1,0 +1,148 @@
+ 
+****************************************
+check_design summary:
+Version:     W-2024.09-SP2
+Date:        Tue Oct  6 10:53:37 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                     16
+    Unconnected ports (LINT-28)                                    16
+
+Cells                                                              71
+    Cells do not drive (LINT-1)                                    29
+    Connected to power or ground (LINT-32)                         24
+    Nets connected to multiple pins on same cell (LINT-33)         18
+--------------------------------------------------------------------------------
+
+Warning: In design 'DataPath_N32', cell 'B_16' does not drive any nets. (LINT-1)
+Warning: In design 'DataPath_N32', cell 'B_17' does not drive any nets. (LINT-1)
+Warning: In design 'register_file_BIT_WIDTH32_ADDR_WIDTH5_REG_NUMBER32', cell 'B_22' does not drive any nets. (LINT-1)
+Warning: In design 'register_file_BIT_WIDTH32_ADDR_WIDTH5_REG_NUMBER32', cell 'B_23' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_24' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_25' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_26' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_27' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_28' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_29' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_30' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_31' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_32' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_33' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_34' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_35' does not drive any nets. (LINT-1)
+Warning: In design 'ALU_N32', cell 'B_36' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_17' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_18' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_19' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_21' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_22' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_23' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_25' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_26' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_27' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_29' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_30' does not drive any nets. (LINT-1)
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', cell 'PG_INST_5_31' does not drive any nets. (LINT-1)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[25]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[24]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[23]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[22]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[21]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[20]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[19]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[18]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[17]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[16]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[15]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[14]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[13]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[12]' is not connected to any nets. (LINT-28)
+Warning: In design 'dlx_cu_MICROCODE_MEM_SIZE64_FUNC_SIZE11_OP_CODE_SIZE6_IR_SIZE32_CW_SIZE15', port 'IR_IN[11]' is not connected to any nets. (LINT-28)
+Warning: In design 'DataPath_N32', port 'RF_WE_EX' is not connected to any nets. (LINT-28)
+Warning: In design 'DataPath_N32', a pin on submodule 'REG_FILE' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'ENABLE' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'REGALUWB' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'EN' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'REGBPROP' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'EN' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'REGEX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'EN' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'REGMEM' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'EN' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'REGWB' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'EN' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'REGNPC_EX' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'EN' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'MUXJAL_ADDR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[4]' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'MUXJAL_ADDR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[3]' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'MUXJAL_ADDR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[2]' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'MUXJAL_ADDR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[1]' is connected to logic 1. 
+Warning: In design 'DataPath_N32', a pin on submodule 'MUXJAL_ADDR' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'A[0]' is connected to logic 1. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_2_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_3_5' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_3_6' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_4_9' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_4_10' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_4_12' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_5_17' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_5_18' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_5_20' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_GENERATOR_NBIT32_NBIT_PER_BLOCK4', a pin on submodule 'PG_INST_5_24' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Pkj' is connected to logic 0. 
+Warning: In design 'CARRY_SELECT_BLOCK_NBIT4', a pin on submodule 'RCA_LOW' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 0. 
+Warning: In design 'CARRY_SELECT_BLOCK_NBIT4', a pin on submodule 'RCA_HIGH' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'Ci' is connected to logic 1. 
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[25]' is connected to pins 'A[31]', 'A[30]'', 'A[29]', 'A[28]', 'A[27]', 'A[26]', 'A[25]'.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[15]' is connected to pins 'A[15]', 'B[15]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[14]' is connected to pins 'A[14]', 'B[14]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[13]' is connected to pins 'A[13]', 'B[13]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[12]' is connected to pins 'A[12]', 'B[12]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[11]' is connected to pins 'A[11]', 'B[11]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[10]' is connected to pins 'A[10]', 'B[10]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[9]' is connected to pins 'A[9]', 'B[9]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[8]' is connected to pins 'A[8]', 'B[8]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[7]' is connected to pins 'A[7]', 'B[7]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[6]' is connected to pins 'A[6]', 'B[6]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[5]' is connected to pins 'A[5]', 'B[5]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[4]' is connected to pins 'A[4]', 'B[4]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[3]' is connected to pins 'A[3]', 'B[3]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[2]' is connected to pins 'A[2]', 'B[2]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[1]' is connected to pins 'A[1]', 'B[1]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXIMM'. (LINT-33)
+   Net 'IR[0]' is connected to pins 'A[0]', 'B[0]''.
+Warning: In design 'DataPath_N32', the same net is connected to more than one pin on submodule 'MUXJAL_ADDR'. (LINT-33)
+   Net '*Logic1*' is connected to pins 'A[4]', 'A[3]'', 'A[2]', 'A[1]', 'A[0]'.
+1

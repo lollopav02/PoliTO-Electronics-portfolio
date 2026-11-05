@@ -1,0 +1,98 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'DLX_SYN' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : DLX_SYN
+Version: W-2024.09-SP2
+Date   : Tue Oct  6 10:59:46 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: DP_I/is_jal_wb_reg
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: PC_reg[0] (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  DLX_SYN            5K_hvratio_1_4        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  DP_I/is_jal_wb_reg/CK (DFFRS_X2)                        0.00 #     0.00 r
+  DP_I/is_jal_wb_reg/Q (DFFRS_X2)                         0.09       0.09 r
+  DP_I/MUXJAL_ADDR/SEL (MUX21_GENERIC_NBIT5_1)            0.00       0.09 r
+  DP_I/MUXJAL_ADDR/U1/Z (MUX2_X1)                         0.07       0.16 r
+  DP_I/MUXJAL_ADDR/Y[3] (MUX21_GENERIC_NBIT5_1)           0.00       0.16 r
+  DP_I/U7/ZN (XNOR2_X1)                                   0.07       0.23 r
+  DP_I/U5/ZN (AND4_X1)                                    0.07       0.30 r
+  DP_I/U4/ZN (AND4_X2)                                    0.07       0.36 r
+  DP_I/U15/ZN (AND2_X2)                                   0.06       0.42 r
+  DP_I/U19/ZN (AOI22_X1)                                  0.04       0.46 f
+  DP_I/U18/ZN (NAND2_X1)                                  0.03       0.50 r
+  DP_I/MUXB/A[1] (MUX21_GENERIC_NBIT32_4)                 0.00       0.50 r
+  DP_I/MUXB/U1/Z (MUX2_X2)                                0.06       0.56 r
+  DP_I/MUXB/Y[1] (MUX21_GENERIC_NBIT32_4)                 0.00       0.56 r
+  DP_I/ALU_i/DATA2[1] (ALU_N32)                           0.00       0.56 r
+  DP_I/ALU_i/r80/A[1] (ALU_N32_DW01_cmp6_1_DW01_cmp6_7)
+                                                          0.00       0.56 r
+  DP_I/ALU_i/r80/U5/ZN (INV_X1)                           0.03       0.59 f
+  DP_I/ALU_i/r80/U3/ZN (OAI21_X1)                         0.05       0.63 r
+  DP_I/ALU_i/r80/U2/ZN (NAND3_X1)                         0.04       0.67 f
+  DP_I/ALU_i/r80/U1/ZN (NAND3_X1)                         0.03       0.70 r
+  DP_I/ALU_i/r80/U15/ZN (NAND3_X1)                        0.03       0.73 f
+  DP_I/ALU_i/r80/U18/ZN (AOI211_X1)                       0.05       0.79 r
+  DP_I/ALU_i/r80/U17/ZN (NOR2_X1)                         0.03       0.81 f
+  DP_I/ALU_i/r80/U16/ZN (NOR2_X1)                         0.04       0.85 r
+  DP_I/ALU_i/r80/U36/ZN (OAI211_X1)                       0.04       0.89 f
+  DP_I/ALU_i/r80/U40/ZN (NAND2_X1)                        0.03       0.92 r
+  DP_I/ALU_i/r80/U39/ZN (AOI21_X1)                        0.03       0.95 f
+  DP_I/ALU_i/r80/U38/ZN (OAI21_X1)                        0.04       0.99 r
+  DP_I/ALU_i/r80/U37/ZN (AOI21_X1)                        0.03       1.02 f
+  DP_I/ALU_i/r80/U95/ZN (OAI21_X1)                        0.04       1.07 r
+  DP_I/ALU_i/r80/U103/ZN (AOI21_X1)                       0.03       1.10 f
+  DP_I/ALU_i/r80/U98/ZN (OAI21_X1)                        0.05       1.15 r
+  DP_I/ALU_i/r80/U97/ZN (AOI21_X1)                        0.03       1.18 f
+  DP_I/ALU_i/r80/U96/ZN (OAI21_X1)                        0.04       1.23 r
+  DP_I/ALU_i/r80/GT (ALU_N32_DW01_cmp6_1_DW01_cmp6_7)     0.00       1.23 r
+  DP_I/ALU_i/U15/ZN (NAND2_X1)                            0.03       1.26 f
+  DP_I/ALU_i/U6/ZN (OAI21_X1)                             0.03       1.29 r
+  DP_I/ALU_i/U18/ZN (NOR2_X1)                             0.03       1.32 f
+  DP_I/ALU_i/U19/ZN (NAND3_X1)                            0.03       1.35 r
+  DP_I/ALU_i/U31/ZN (NAND2_X1)                            0.03       1.37 f
+  DP_I/ALU_i/U33/Z (MUX2_X1)                              0.07       1.44 f
+  DP_I/ALU_i/U32/ZN (NAND2_X1)                            0.03       1.47 r
+  DP_I/ALU_i/OUTALU[0] (ALU_N32)                          0.00       1.47 r
+  DP_I/MUXJUMP/A[0] (MUX21_GENERIC_NBIT32_3)              0.00       1.47 r
+  DP_I/MUXJUMP/U3/Z (MUX2_X1)                             0.05       1.52 r
+  DP_I/MUXJUMP/Y[0] (MUX21_GENERIC_NBIT32_3)              0.00       1.52 r
+  DP_I/PC_OUT[0] (DataPath_N32)                           0.00       1.52 r
+  U134/ZN (NAND2_X1)                                      0.03       1.55 f
+  U133/ZN (NAND2_X1)                                      0.03       1.58 r
+  PC_reg[0]/D (DFFR_X1)                                   0.01       1.59 r
+  data arrival time                                                  1.59
+
+  clock CLK (rise edge)                                   1.60       1.60
+  clock network delay (ideal)                             0.00       1.60
+  PC_reg[0]/CK (DFFR_X1)                                  0.00       1.60 r
+  library setup time                                     -0.03       1.57
+  data required time                                                 1.57
+  --------------------------------------------------------------------------
+  data required time                                                 1.57
+  data arrival time                                                 -1.59
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+1

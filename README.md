@@ -12,6 +12,7 @@ RF hardware design, digital ASIC synthesis, FPGA and microcontroller-based embed
 | [Microstrip low-pass filter](projects/microstrip-lowpass-filter) | RF / microwave | MATLAB, AWR Microwave Office, AXIEM, VNA | Full flow from specification to fabricated PCB and VNA measurement; 2.4 GHz cut-off, ~35 dB rejection at 4.8 GHz |
 | [Low-power synthesis of a SHA-256 core](projects/sha256-low-power-synthesis) | Digital IC design | Synopsys Design Compiler, PrimeTime, Tcl | 65 nm synthesis at 333 MHz; clock gating + multi-Vt reduce area by 19% vs. baseline; custom PrimeTime timing-path report |
 | [Tetris on the LandTiger board](projects/tetris-landtiger) | Embedded C | NXP LPC1768 (Cortex-M3), Keil µVision | Interrupt-driven game with LCD, joystick, ADC-controlled speed, DAC sound, power-ups; host-side unit and fuzz tests |
+| [DLX microprocessor](projects/dlx-microprocessor) | Digital IC design / computer architecture | VHDL, QuestaSim, Synopsys Design Compiler, Cadence Innovus | 5-stage pipelined DLX with forwarding, 50 instructions and P4 adder; 588 MHz and 15.1k µm² after place & route (NanGate 45 nm) |
 
 ## Labs
 
@@ -24,7 +25,7 @@ RF hardware design, digital ASIC synthesis, FPGA and microcontroller-based embed
 ## Skills
 
 **Languages:** C (embedded), VHDL, Verilog, Tcl, MATLAB  
-**Tools:** Intel Quartus Prime, ModelSim, Synopsys Design Compiler & PrimeTime, Keil µVision, STM32CubeIDE, AWR Microwave Office  
+**Tools:** Intel Quartus Prime, ModelSim, Synopsys Design Compiler & PrimeTime, Cadence Innovus, QuestaSim, Keil µVision, STM32CubeIDE, AWR Microwave Office  
 **Lab instruments:** oscilloscope, vector network analyzer, waveform generator, power supply
 
 ## Notes

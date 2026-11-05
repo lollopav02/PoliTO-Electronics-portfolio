@@ -35,8 +35,6 @@ simulation/
 work/
 greybox_tmp/
 *.qws
-*.rpt
-*.summary
 *.smsg
 *.wlf
 transcript
